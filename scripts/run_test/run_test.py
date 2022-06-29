@@ -15,7 +15,7 @@ def run_test(problem_number: int):
         main_text = f.read()
 
     pytest.main([f"{os.path.dirname(__file__)}/test_main.py", "--no-header",
-                "--tb=short", "--disable-warnings", "--cases", json.dumps(cases), "--main", main_text])
+                "--tb=short", "--disable-warnings", "--cases", json.dumps(cases), "-vv", "--main", main_text])
 
 
 if __name__ == "__main__":

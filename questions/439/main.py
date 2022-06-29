@@ -39,10 +39,9 @@ N = int(input())
 A = [int(n) for n in input().split(" ")]
 
 for _ in range(N):
-    flag = False
+    min = float('inf')
     for i in range(N - 1):
         if A[i] > A[i + 1]:
             A[i], A[i + 1] = A[i + 1], A[i]
             flag = True
-    if flag: print(*A)
-    else: break
+    print(A)
